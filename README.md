@@ -52,7 +52,7 @@ sudo nano /usr/local/hadoop/etc/hadoop/core-site.xml
 </configuration>
 ```
 
-#config hdfs-site.xml
+#### 6. config hdfs-site.xml
 ```shell
 sudo nano /usr/local/hadoop/etc/hadoop/hdfs-site.xml
 #content
@@ -71,7 +71,7 @@ sudo nano /usr/local/hadoop/etc/hadoop/hdfs-site.xml
 </configuration>
 ```
 
-#setup workers
+#### 7. setup workers
 ```shell
 sudo nano /usr/local/hadoop/etc/hadoop/workers #or slave
 #content
@@ -83,7 +83,7 @@ scp /usr/local/hadoop/etc/hadoop/* slave1:/usr/local/hadoop/etc/hadoop
 scp /usr/local/hadoop/etc/hadoop/* slave2:/usr/local/hadoop/etc/hadoop
 ```
 
-#### 6. run dfs
+#### 8. run dfs
 ```shell
 #format HDFS file system.
 source /etc/environment hdfs namenode -format
@@ -94,7 +94,7 @@ jps #check with terminal
 master:9870 #check with url
 ```
 
-#### 7. run yarn
+#### 9. run yarn
 ```shell
 #config yarn (in .bashrc or terminal)
 export HADOOP_HOME="/usr/local/hadoop/"
