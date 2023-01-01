@@ -8,7 +8,7 @@ sudo apt install openjdk-8-jdk
 sudo wget -P ~ https://mirrors.sonic.net/apache/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz
 ```
 
-####2. First setup hadoop
+#### 2. First setup hadoop
 ```shell
 #unzip and rename
 tar xzf hadoop-3.3.4.tar.gz
@@ -27,7 +27,7 @@ PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 ```
 
-####3. Create hadoopuser
+#### 3. Create hadoopuser
 ```shell
 sudo adduser hadoopuser
 
@@ -38,9 +38,9 @@ sudo chmod g+rwx -R /usr/local/hadoop/
 sudo adduser hadoopuser sudo (to add sudo root for this user)
 ```
 
-####4. Setup network for master and slave (gen key-ssh, rename hostname and same hadoopuser) and login hadoopuser (su - hadoopuser)
+#### 4. Setup network for master and slave (gen key-ssh, rename hostname and same hadoopuser) and login hadoopuser (su - hadoopuser)
 
-####5. Config core-site.xml
+#### 5. Config core-site.xml
 ```shell
 sudo nano /usr/local/hadoop/etc/hadoop/core-site.xml
 #content
@@ -83,7 +83,7 @@ scp /usr/local/hadoop/etc/hadoop/* slave1:/usr/local/hadoop/etc/hadoop
 scp /usr/local/hadoop/etc/hadoop/* slave2:/usr/local/hadoop/etc/hadoop
 ```
 
-####6. run dfs
+#### 6. run dfs
 ```shell
 #format HDFS file system.
 source /etc/environment hdfs namenode -format
@@ -94,7 +94,7 @@ jps #check with terminal
 master:9870 #check with url
 ```
 
-####6. run yarn
+#### 7. run yarn
 ```shell
 #config yarn (in .bashrc or terminal)
 export HADOOP_HOME="/usr/local/hadoop/"
@@ -117,5 +117,3 @@ start-yarn.sh
 
 #check: http://master:8088/cluster
 ```
-
-
