@@ -1,6 +1,6 @@
 ### config and run hadoop
 
-####1. Download necessary package
+#### 1. Download necessary package
 ```shell
 #Install Java
 sudo apt install openjdk-8-jdk
